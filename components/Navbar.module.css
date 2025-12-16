@@ -1,0 +1,126 @@
+.navbar {
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: var(--spacing-xs) 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    height: 100%;
+}
+
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+    display: none;
+    /* Hidden on mobile by default, shown via media query */
+}
+
+.logoImage {
+    border-radius: 50%;
+    border: 2px solid var(--color-gold);
+}
+
+.logoText {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-platinum);
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style: none;
+}
+
+.navItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-light-grey);
+    font-size: 0.75rem;
+    transition: color 0.2s;
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-md);
+}
+
+.navItem:hover,
+.active {
+    color: var(--color-accent-blue);
+    background: rgba(59, 130, 246, 0.1);
+}
+
+.navItem:active {
+    transform: scale(0.95);
+}
+
+.icon {
+    font-size: 1.25rem;
+    margin-bottom: 2px;
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .navbar {
+        top: 0;
+        bottom: auto;
+        border-top: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: var(--spacing-md) 0;
+        background: rgba(10, 10, 10, 0.9);
+    }
+
+    .container {
+        max-width: 1200px;
+        padding: 0 var(--spacing-xl);
+    }
+
+    .logoWrapper {
+        display: flex;
+    }
+
+    .navLinks {
+        width: auto;
+        gap: var(--spacing-2xl);
+    }
+
+    .navItem {
+        flex-direction: row;
+        font-size: 1rem;
+        gap: var(--spacing-sm);
+        padding: var(--spacing-xs) var(--spacing-md);
+        border-radius: var(--radius-full);
+    }
+
+    .navItem:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .active {
+        background: rgba(59, 130, 246, 0.1);
+        color: var(--color-accent-blue);
+    }
+
+    .icon {
+        margin-bottom: 0;
+        font-size: 1.1rem;
+    }
+}

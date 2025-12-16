@@ -1,0 +1,172 @@
+.container {
+    padding-bottom: 80px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    padding: var(--spacing-xl) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatarWrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: var(--spacing-md);
+    border: 3px solid var(--color-accent-blue);
+}
+
+.avatar {
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+}
+
+.contact {
+    color: var(--color-light-grey);
+    margin-bottom: var(--spacing-sm);
+}
+
+.editBtn {
+    color: var(--color-accent-blue);
+    font-size: 0.875rem;
+    margin-top: var(--spacing-sm);
+    text-decoration: underline;
+}
+
+.section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-platinum);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.bookingCard {
+    background: var(--color-dark-grey);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.bookingCard:hover {
+    background: var(--color-grey);
+    transform: translateX(4px);
+}
+
+.bookingInfo h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.bookingService {
+    font-size: 0.875rem;
+    color: var(--color-light-grey);
+}
+
+.bookingDate {
+    font-size: 0.75rem;
+    color: var(--color-gold);
+    margin-top: 4px;
+}
+
+.status {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+}
+
+.statusUpcoming {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--color-accent-blue);
+}
+
+.statusCompleted {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-light-grey);
+}
+
+.settingItem {
+    width: 100%;
+    text-align: left;
+    padding: var(--spacing-md);
+    background: var(--color-dark-grey);
+    border-radius: var(--radius-md);
+    color: var(--color-platinum);
+    transition: background 0.2s;
+}
+
+.settingItem:hover {
+    background: var(--color-grey);
+}
+
+.logout {
+    color: #ef4444;
+    margin-top: var(--spacing-md);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.logout:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Edit Form Styles */
+.editInput {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-platinum);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.editActions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.saveBtn {
+    background: var(--color-accent-blue);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+}
+
+.cancelBtn {
+    background: transparent;
+    border: 1px solid var(--color-light-grey);
+    color: var(--color-platinum);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-md);
+}

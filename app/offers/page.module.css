@@ -1,0 +1,124 @@
+.container {
+    padding: 100px var(--spacing-md) 100px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.card {
+    background: var(--color-dark-grey);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.imageWrapper {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.discountBadge {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: var(--color-accent-blue);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    padding: var(--spacing-lg);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-sm);
+}
+
+.offerTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-platinum);
+}
+
+.salonName {
+    font-size: 0.875rem;
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+.description {
+    color: var(--color-light-grey);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.5;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-md);
+}
+
+.validity {
+    font-size: 0.75rem;
+    color: var(--color-light-grey);
+}
+
+.claimBtn {
+    background: var(--gradient-dark-blue);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: opacity 0.2s;
+}
+
+.claimBtn:hover {
+    opacity: 0.9;
+}
+
+/* Desktop Optimization */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        padding-top: 120px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: var(--spacing-xl);
+    }
+
+    .imageWrapper {
+        height: 240px;
+    }
+}

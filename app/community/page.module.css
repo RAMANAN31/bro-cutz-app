@@ -1,0 +1,147 @@
+.container {
+    padding: 100px var(--spacing-md) 100px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.post {
+    background: var(--color-dark-grey);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.postHeader {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+}
+
+.avatarWrapper {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.avatar {
+    object-fit: cover;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.userName {
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.timeAgo {
+    font-size: 0.75rem;
+    color: var(--color-light-grey);
+}
+
+.imageWrapper {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.postImage {
+    object-fit: cover;
+}
+
+.postContent {
+    padding: var(--spacing-md);
+}
+
+.actions {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
+}
+
+.actionBtn {
+    color: var(--color-platinum);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s;
+}
+
+.actionBtn:hover {
+    color: var(--color-accent-blue);
+}
+
+.caption {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.captionUser {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.fab {
+    position: fixed;
+    bottom: 90px;
+    right: var(--spacing-lg);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--gradient-gold);
+    color: var(--color-black);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+    transition: transform 0.2s;
+    z-index: 90;
+}
+
+.fab:hover {
+    transform: scale(1.1);
+}
+
+/* Desktop Optimization */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+        padding-top: 120px;
+    }
+
+    .post {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .imageWrapper {
+        height: 500px;
+    }
+
+    .fab {
+        right: calc((100vw - 800px) / 2 + var(--spacing-lg));
+    }
+}

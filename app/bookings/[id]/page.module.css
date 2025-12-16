@@ -1,0 +1,149 @@
+.container {
+    padding-bottom: 80px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.receipt {
+    background: var(--color-dark-grey);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+}
+
+.receipt::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: radial-gradient(circle, transparent 6px, var(--color-dark-grey) 6px);
+    background-size: 16px 16px;
+    background-position: center bottom;
+}
+
+.statusBanner {
+    padding: var(--spacing-sm);
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+}
+
+.statusUpcoming {
+    background: var(--color-accent-blue);
+    color: white;
+}
+
+.statusCompleted {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-light-grey);
+}
+
+.receiptContent {
+    padding: var(--spacing-xl);
+}
+
+.salonInfo {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.salonImageWrapper {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.salonImage {
+    object-fit: cover;
+}
+
+.salonDetails h2 {
+    font-size: 1.125rem;
+    margin-bottom: 4px;
+}
+
+.salonDetails p {
+    font-size: 0.875rem;
+    color: var(--color-light-grey);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.label {
+    color: var(--color-light-grey);
+    font-size: 0.875rem;
+}
+
+.value {
+    font-weight: 600;
+    color: var(--color-platinum);
+}
+
+.totalRow {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalLabel {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.totalValue {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.cancelBtn {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-grey);
+    border-radius: var(--radius-md);
+    color: #ef4444;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.cancelBtn:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.bookAgainBtn {
+    width: 100%;
+}

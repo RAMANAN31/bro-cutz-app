@@ -1,0 +1,172 @@
+.container {
+    padding: 100px var(--spacing-md) 100px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+    background: var(--gradient-gold);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.balanceCard {
+    background: var(--gradient-dark-blue);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.balanceLabel {
+    color: var(--color-light-grey);
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.balanceAmount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-platinum);
+}
+
+.pointsSection {
+    text-align: right;
+    background: rgba(0, 0, 0, 0.3);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-gold);
+}
+
+.pointsLabel {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-gold);
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.pointsValue {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-platinum);
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.actionBtn {
+    background: var(--color-dark-grey);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    color: var(--color-platinum);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.actionBtn:hover {
+    background: var(--color-grey);
+    border-color: var(--color-accent-blue);
+    transform: translateY(-2px);
+}
+
+.actionIcon {
+    font-size: 1.5rem;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    color: var(--color-platinum);
+    margin-bottom: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: var(--spacing-sm);
+}
+
+.transactionList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.transactionItem {
+    background: var(--color-dark-grey);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.txIcon {
+    background: rgba(255, 255, 255, 0.05);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.txDetails {
+    flex: 1;
+}
+
+.txDesc {
+    color: var(--color-platinum);
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.txDate {
+    display: block;
+    color: var(--color-light-grey);
+    font-size: 0.75rem;
+}
+
+.txAmount {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.credit {
+    color: #22c55e;
+}
+
+.debit {
+    color: #ef4444;
+}
+
+.reward {
+    color: var(--color-gold);
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+        padding-top: 120px;
+    }
+}

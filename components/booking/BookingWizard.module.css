@@ -1,0 +1,214 @@
+.wizard {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+}
+
+.progress::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-grey);
+    z-index: 0;
+}
+
+.step {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background: var(--color-black);
+    padding: 0 var(--spacing-sm);
+}
+
+.stepNumber {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.activeStep .stepNumber {
+    background: var(--color-accent-blue);
+    color: white;
+}
+
+.stepLabel {
+    font-size: 0.75rem;
+    color: var(--color-light-grey);
+}
+
+.activeStep .stepLabel {
+    color: var(--color-platinum);
+}
+
+.stepTitle {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.card {
+    background: var(--color-dark-grey);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.selected {
+    border-color: var(--color-accent-blue);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2), 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.imageWrapper {
+    position: relative;
+    height: 120px;
+    width: 100%;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.cardContent {
+    padding: var(--spacing-md);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-dark-grey);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.listItem:hover {
+    background: var(--color-grey);
+}
+
+.listContent h3 {
+    margin-bottom: 4px;
+}
+
+.listContent p {
+    font-size: 0.875rem;
+    color: var(--color-light-grey);
+}
+
+.price {
+    font-weight: 700;
+    color: var(--color-gold);
+    font-size: 1.125rem;
+}
+
+.timeContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.dateInput {
+    background: var(--color-dark-grey);
+    border: 1px solid var(--color-grey);
+    color: var(--color-platinum);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    width: 100%;
+    font-family: inherit;
+}
+
+.slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.slot {
+    background: var(--color-dark-grey);
+    color: var(--color-platinum);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+}
+
+.slot:hover:not(:disabled) {
+    background: var(--color-grey);
+}
+
+.slot:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.selectedSlot {
+    background: var(--color-accent-blue) !important;
+    color: white;
+}
+
+.summary {
+    background: var(--color-dark-grey);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+}
+
+.summaryItem {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.totalPrice {
+    color: var(--color-gold);
+    font-size: 1.25rem;
+}
+
+.actions {
+    margin-top: var(--spacing-xl);
+    display: flex;
+    justify-content: space-between;
+}
+
+.backBtn {
+    color: var(--color-light-grey);
+    text-decoration: underline;
+}
